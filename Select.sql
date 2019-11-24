@@ -23,6 +23,15 @@ SELECT modelo, preco
 FROM carros 
 ORDER BY preco DESC;
 
+SELECT * FROM carros
+WHERE ano >= 1970 AND ano <= 2000;
 
+SELECT * FROM carros
+WHERE cor = 'Branco' OR cor = 'Verde';
 
-
+# Apresentar a data formatada filtrando pelo carro com data de fabricação
+SELECT 
+	modelo AS 'Modelo', 
+    DATE_FORMAT(data_fabricacao, '%d/%m/%Y') AS 'Data de Fabricação'
+FROM carros
+WHERE data_fabricacao IS NOT NULL;
