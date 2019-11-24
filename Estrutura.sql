@@ -9,7 +9,6 @@ CREATE TABLE clientes(
     cpf VARCHAR(14)
 );
 
-
 DROP TABLE IF EXISTS carros;
 CREATE TABLE carros(
 	id INT, 
@@ -18,6 +17,12 @@ CREATE TABLE carros(
     ano INT,
     preco DOUBLE, # double serve para número real
 	data_fabricacao DATE # date serve para data
+);
+
+DROP TABLE IF EXISTS alimentos;
+CREATE TABLE alimentos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
 );
 
 
